@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Detail - My Portfolio</title>
+    <meta name="description" content="Personal detail page showing my background and info.">
+    <!-- Custom Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- HEADER & NAV -->
+    <header id="top">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="personal.html" class="active">Personal Detail</a></li>
+                <li><a href="academic.html">Academic Journey</a></li>
+                <li><a href="projects.html">Previous Project</a></li>
+                <li><a href="certificates.html">Certificate</a></li>
+                <li><a href="resume.html">My Resume</a></li>
+            </ul>
+        </nav>
+        <div class="page-hero">
+            <h1>Personal Detail</h1>
+            <p id="datetime-display"></p>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- PERSONAL DETAIL SECTION -->
+        <section id="about" class="container">
+            <h2>Personal Detail</h2>
+            <article class="about-content">
+                <!-- Profile Image -->
+                <div class="img-wrapper">
+                    <img src="formal_photo_blue_blazer.png" alt="A photo of me" class="profile-img" id="profile-pic">
+                </div>
+                <div class="about-text">
+                    <div class="detail-box">Ooi Xien Xien</div>
+                    <div class="detail-box subtitle">Software Engineer</div>
+                    <div class="detail-box info">
+                        Email: <a href="mailto:xienxien13@gmail.com">xienxien13@gmail.com</a><br>
+                        Phone: +60197560221<br>
+                        Location: Johor, Malaysia
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 My Personal Portfolio. Built for Web Development Assignment.</p>
+        <div class="footer-links">
+            <a href="https://github.com/" target="_blank" rel="noopener">My GitHub</a> |
+            <a href="#top">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
