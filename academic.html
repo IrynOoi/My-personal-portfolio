@@ -1,3 +1,4 @@
+<!-- academic.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -23,44 +25,68 @@
                 <li><a href="resume.html">My Resume</a></li>
             </ul>
         </nav>
-        <div class="hero">
+        <div class="hero" style="display:none;">
             <h1>Academic Background</h1>
             <p id="datetime-display"></p>
         </div>
     </header>
 
     <main>
-        <!-- EDUCATION TABLE -->
-        <section id="education" class="container bg-light">
-            <h2>Education Background</h2>
-            <article>
-                <table class="education-table">
-                    <thead>
-                        <tr>
-                            <th>Level of Study</th>
-                            <th>Institution</th>
-                            <th>Years</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Bachelor's Degree in CS</td>
-                            <td>University Technical Malaysia (UTEM)</td>
-                            <td>2023 - Present</td>
-                        </tr>
-                        <tr>
-                            <td>High School / Pre-U</td>
-                            <td>Science College</td>
-                            <td>2018 - 2022</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </article>
+        <section class="academic-container">
+            <h2 class="academic-title">Academic History</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>UTeM Bachelor's in Software Development</h3>
+                        <ul>
+                            <li>Current CGPA: 3.82</li>
+                            <li>Dean's List (11/12/2024)</li>
+                            <li>DSC Core Team Member (under multimedia team)</li>
+                            <li>Media team member for Kelab Debat Utem</li>
+                            <li>Won first place for sukan pingpong antara fakulti</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>STPM in SMK Taman Daya</h3>
+                        <ul>
+                            <li>Current CGPA: 3.17</li>
+                            <li>Chairman of Kelab Rakan Muda</li>
+                            <li>Form 6 Librarian</li>
+                            <li>Won 3rd place for 3D showcase competition</li>
+                            <li>Won 2nd place for English Drama Preuniversity Competition</li>
+                            <li>Won 2nd place for Singing Competition 2022/23</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-school-flag"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>SPM in SMK IJ Convent</h3>
+                        <ul>
+                            <li>SPM Achievements: 2A 4A- 3B+ B</li>
+                            <li>Active member of Pingpong club</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 My Personal Portfolio. Built for Web Development Assignment.</p>
+        <p>&copy; 2026 OOI XIEN XIEN - Personal Portfolio.</p>
         <div class="footer-links">
             <a href="https://github.com/" target="_blank" rel="noopener">My GitHub</a> |
             <a href="#top">Back to top ↑</a>
@@ -68,6 +94,30 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach((item, index) => {
+                item.style.setProperty('--anim-order', index);
+                observer.observe(item);
+            });
+        });
+    </script>
 </body>
 
 </html>

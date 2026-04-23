@@ -1,3 +1,4 @@
+<!-- personal_detail -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +8,10 @@
     <title>Personal Detail - My Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -24,105 +27,96 @@
                 <li><a href="resume.html">My Resume</a></li>
             </ul>
         </nav>
-        <div class="hero">
-            <h1>Personal Detail & Skills</h1>
-        </div>
     </header>
 
     <!-- MAIN CONTENT -->
     <main>
-        <!-- PERSONAL DETAIL SECTION -->
-        <section id="about" class="container">
-            <article class="about-content">
-                <!-- Profile Image -->
-                <div class="img-wrapper">
-                    <img src="formal_photo_blue_blazer.png" alt="A photo of me" class="profile-img" id="profile-pic">
+        <!-- ABOUT ME SECTION -->
+        <section class="about-section">
+            <div class="profile-container">
+                <img src="formal_photo_blue_blazer.png" alt="Profile Photo" class="profile-pic">
+            </div>
+            <div class="about-card">
+                <h1>About Me</h1>
+                <h2>Ooi Xien Xien</h2>
+
+                <p><strong>Passion:</strong>
+                    Driven to apply my software development expertise to create impactful, innovative solutions, while
+                    continually expanding my skills and growing as a developer.</p>
+
+                <p><strong>Bio:</strong>
+                    I can become fortune itself (The era of the heart has begun.)</p>
+
+                <div class="social-icons">
+                    <a href="https://t.me/IrynOoi" target="_blank" class="social-icon">
+                        <img src="icon/Telegram-Logo-Icon.png" alt="Telegram">
+                    </a>
+                    <a href="https://wa.me/60197560221" target="_blank" class="social-icon">
+                        <img src="icon/ws_icon.png" alt="WhatsApp">
+                    </a>
+                    <a href="mailto:xienxien13@gmail.com" class="social-icon">
+                        <img src="icon/gmail.png" alt="Gmail">
+                    </a>
+                    <a href="https://github.com/IrynOoi" target="_blank" class="social-icon">
+                        <img src="icon/github-icon.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.instagram.com/xienxien5653/" target="_blank" class="social-icon">
+                        <img src="icon/insta_icon.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/in/ooi-xien-xien-8883b8294/" target="_blank" class="social-icon">
+                        <img src="icon/linkedin.png" alt="LinkedIn">
+                    </a>
                 </div>
-                <div class="about-text">
-                    <div class="detail-box">Ooi Xien Xien</div>
-                    <div class="detail-box subtitle">Software Engineer</div>
-                    <div class="detail-box info">
-                        Email: <a href="mailto:xienxien13@gmail.com">xienxien13@gmail.com</a><br>
-                        Phone: +60197560221<br>
-                        Location: Johor, Malaysia
-                    </div>
+
+                <div class="stars-decor">
+                    <!-- SVG stars with green theme colors -->
+                    <svg width="45" height="45" viewBox="0 0 24 24" fill="var(--color-dark)"
+                        style="position:absolute; bottom:25px; right:0px; transform:rotate(15deg);">
+                        <path
+                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+                    </svg>
+                    <svg width="25" height="25" viewBox="0 0 24 24" fill="var(--color-bg)"
+                        style="position:absolute; bottom:0px; right:25px; transform:rotate(-15deg);">
+                        <path
+                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+                    </svg>
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="var(--color-medium)"
+                        style="position:absolute; bottom:15px; right:45px; transform:rotate(25deg);">
+                        <path
+                            d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+                    </svg>
                 </div>
-            </article>
+            </div>
         </section>
 
-        <!-- TECHNICAL SKILL SECTION -->
-        <section id="skills" class="container"
-            style="background: var(--color-light); border-radius: 24px; padding-bottom: 4rem;">
-            <h2>My technical skill</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="circular-progress" style="--progress: 85%;">
-                        <div class="progress-value">85%</div>
-                    </div>
-                    <div class="skill-name">C++</div>
+        <!-- GALLERY SECTION -->
+        <section class="gallery-section">
+            <h2 class="gallery-title">My Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="gallery/selfie2.jpg" alt="Gallery Image 1">
                 </div>
-                <div class="skill-item">
-                    <div class="circular-progress" style="--progress: 60%;">
-                        <div class="progress-value">60%</div>
-                    </div>
-                    <div class="skill-name">Java</div>
+                <div class="gallery-item">
+                    <img src="gallery/selfie3.jpg" alt="Gallery Image 2">
                 </div>
-                <div class="skill-item">
-                    <div class="circular-progress" style="--progress: 70%;">
-                        <div class="progress-value">70%</div>
-                    </div>
-                    <div class="skill-name">Kotlin</div>
+                <div class="gallery-item">
+                    <img src="gallery/selfie4.jpg" alt="Gallery Image 3">
                 </div>
-                <div class="skill-item">
-                    <div class="circular-progress" style="--progress: 73%;">
-                        <div class="progress-value">73%</div>
-                    </div>
-                    <div class="skill-name">Flutter</div>
+                <div class="gallery-item">
+                    <img src="gallery/selfie5.jpg" alt="Gallery Image 4">
                 </div>
-                <div class="skill-item">
-                    <div class="circular-progress" style="--progress: 87%;">
-                        <div class="progress-value">87%</div>
-                    </div>
-                    <div class="skill-name">Figma</div>
+                <div class="gallery-item">
+                    <img src="gallery/selfie6.jpg" alt="Gallery Image 5">
                 </div>
-
-                <div class="skill-item">
-                    <div class="circular-progress" style="--progress: 74%;">
-                        <div class="progress-value">74%</div>
-                    </div>
-                    <div class="skill-name">JavaScript</div>
-                </div>
-                <div class="skill-item">
-                    <div class="circular-progress" style="--progress: 75%;">
-                        <div class="progress-value">75%</div>
-                    </div>
-                    <div class="skill-name">R programming</div>
-                </div>
-                <div class="skill-item">
-                    <div class="circular-progress" style="--progress: 70%;">
-                        <div class="progress-value">70%</div>
-                    </div>
-                    <div class="skill-name">Dart</div>
-                </div>
-                <div class="skill-item">
-                    <div class="circular-progress" style="--progress: 78%;">
-                        <div class="progress-value">78%</div>
-                    </div>
-                    <div class="skill-name">Firebase</div>
-                </div>
-                <div class="skill-item">
-                    <div class="circular-progress" style="--progress: 87%;">
-                        <div class="progress-value">87%</div>
-                    </div>
-                    <div class="skill-name">MySQL</div>
+                <div class="gallery-item">
+                    <img src="gallery/selfie7.jpg" alt="Gallery Image 6">
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 My Personal Portfolio.</p>
+        <p>&copy; 2026 OOI XIEN XIEN - Personal Portfolio.</p>
         <div class="footer-links">
             <a href="https://github.com/" target="_blank" rel="noopener">My GitHub</a> |
             <a href="#top">Back to top ↑</a>
