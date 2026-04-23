@@ -1,4 +1,5 @@
 <!-- certificates.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,16 +16,7 @@
 
 <body class="certificates-page">
     <header id="top">
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="personal_detail.html">Personal Detail</a></li>
-                <li><a href="academic.html">Academic Journey</a></li>
-                <li><a href="projects.html">Previous Project</a></li>
-                <li><a href="certificates.html" class="active">Certificate</a></li>
-                <li><a href="resume.html">My Resume</a></li>
-            </ul>
-        </nav>
+        <div id="nav-placeholder"></div>
         <div class="hero">
             <h1>CERTIFICATES</h1>
         </div>
@@ -32,69 +24,71 @@
 
     <main>
         <section id="certificates" class="container">
-            <h2 class="section-title">CERTIFICATES</h2>
-            
             <div class="certificate-grid">
-                <!-- Certificate 1 -->
+                <!-- Certificate 1: AI Singapore -->
                 <div class="certificate-card">
                     <div class="certificate-img-container">
-                        <img src="gallery/certificate_mockup_green.png" alt="Python Programming Fundamentals Certificate">
+                        <img src="certificates/certAI.jpg" alt="AI Singapore Certificate">
                     </div>
                 </div>
 
-                <!-- Certificate 2 -->
+                <!-- Certificate 2: Database Foundations -->
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="certificates/db_Pro_cert.jpg" alt="Database Foundations Certificate">
+                    </div>
+                </div>
+
+                <!-- Certificate 3: ISTQB Test Management -->
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="certificates/ISTQB_test_management.jpg" alt="ISTQB Test Management Certificate">
+                    </div>
+                </div>
+
+                <!-- Certificate 4: Mastery Certificate -->
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="certificates/Mastery_cert_OOI XIEN XIEN.jpg"
+                            alt="Mastery Certificate - OOI XIEN XIEN">
+                    </div>
+                </div>
+
+                <!-- Certificate 5: Completion Training -->
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="certificates/OOI XIEN XIEN - Completion Training.jpg"
+                            alt="Completion Training Certificate">
+                    </div>
+                </div>
+
+                <!-- Certificate 6: GitHub Participation -->
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="certificates/SIJIL GITHUB PENYERTAAN 30 PESERTA-17.jpg"
+                            alt="GitHub Workshop Participation">
+                    </div>
+                </div>
+
+                <!-- Certificate 7: Raspberry Pi Pico -->
+                <div class="certificate-card">
+                    <div class="certificate-img-container">
+                        <img src="certificates/SIJIL PENYERTAAN PESERTA RASPBERRY PI PICO.jpg"
+                            alt="Raspberry Pi Pico Certificate">
+                    </div>
+                </div>
+
+                <!-- Certificate 8: UTeM Hackathon (Ketua) -->
                 <div class="certificate-card">
                     <div class="certificate-img-container portrait">
-                        <img src="gallery/certificate_mockup_green.png" alt="Certificate of Participation">
+                        <img src="certificates/UTEM_HACKATHON_KETUA_mycert.jpg" alt="UTeM Hackathon - Team Leader">
                     </div>
                 </div>
 
-                <!-- Certificate 3 -->
+                <!-- Certificate 9: TopCoder -->
                 <div class="certificate-card">
                     <div class="certificate-img-container">
-                        <img src="gallery/certificate_mockup_green.png" alt="Debate Skills Workshop Certificate">
-                    </div>
-                </div>
-
-                <!-- Certificate 4 -->
-                <div class="certificate-card">
-                    <div class="certificate-img-container portrait">
-                        <img src="gallery/certificate_mockup_green.png" alt="Seminar Melaka Certificate">
-                    </div>
-                </div>
-
-                <!-- Certificate 5 -->
-                <div class="certificate-card">
-                    <div class="certificate-img-container">
-                        <img src="gallery/certificate_mockup_green.png" alt="MATLAB Onramp Certificate">
-                    </div>
-                </div>
-
-                <!-- Certificate 6 -->
-                <div class="certificate-card">
-                    <div class="certificate-img-container">
-                        <img src="gallery/certificate_mockup_green.png" alt="ISTQB Test Management Quiz Certificate">
-                    </div>
-                </div>
-
-                <!-- Certificate 7 -->
-                <div class="certificate-card">
-                    <div class="certificate-img-container">
-                        <img src="gallery/certificate_mockup_green.png" alt="AI Singapore Certificate">
-                    </div>
-                </div>
-
-                <!-- Certificate 8 -->
-                <div class="certificate-card">
-                    <div class="certificate-img-container portrait">
-                        <img src="gallery/certificate_mockup_green.png" alt="GitHub Desk Workshop Certificate">
-                    </div>
-                </div>
-
-                <!-- Certificate 9 -->
-                <div class="certificate-card">
-                    <div class="certificate-img-container">
-                        <img src="gallery/certificate_mockup_green.png" alt="Database Foundations Certificate">
+                        <img src="certificates/UTEMB032310183_topcoder.jpg" alt="TopCoder Certificate">
                     </div>
                 </div>
             </div>
@@ -109,13 +103,15 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 OOI XIEN XIEN - Personal Portfolio.</p>
-        <div class="footer-links">
-            <a href="https://github.com/" target="_blank" rel="noopener">My GitHub</a> |
-            <a href="#top">Back to top ↑</a>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <!-- Modal for Certificate Zoom -->
+    <div id="cert-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="modal-caption"></div>
+    </div>
+    <script src="components.js"></script>
 
     <script src="script.js"></script>
 </body>

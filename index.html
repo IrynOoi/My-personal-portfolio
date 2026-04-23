@@ -5,242 +5,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio - Home</title>
-    <meta name="description" content="Personal webpage showcasing my background.">
+    <title>My Personal Portfolio · Green theme</title>
+    <meta name="description" content="Personal webpage showcasing my background — green & white theme">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* --- General Layout Fixes --- */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 20px;
-        }
-
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 20px;
-        }
-
-        .hero-content {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .hero-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            min-width: 300px;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* --- Contact Details Styling --- */
-        .contact-info {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid #2c3e50;
-            margin-top: 1.5rem;
-            line-height: 1.8;
-            font-size: 1.1rem;
-            max-width: 400px;
-        }
-
-        .contact-info i {
-            font-size: 1.2rem;
-            margin-right: 8px;
-        }
-
-        /* --- Skills Grid --- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 20px;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        /* --- Green-themed styles for academic section --- */
-        .academic-section {
-            padding: 4rem 0 2rem;
-        }
-
-        .academic-section h2 {
-            color: #2e7d32;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 2.5rem;
-        }
-
-        .academic-section h2 i {
-            color: #4caf50;
-            font-size: 1.8rem;
-        }
-
-        .academic-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .academic-card {
-            background: white;
-            border-radius: 24px;
-            padding: 2rem 1.8rem;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
-            border-left: 8px solid #4caf50;
-            transition: transform 0.2s ease;
-        }
-
-        .academic-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .academic-card .card-header {
-            margin-bottom: 1.5rem;
-            border-bottom: 1px dashed #a5d6a7;
-            padding-bottom: 1rem;
-        }
-
-        .academic-card .card-header i {
-            color: #2e7d32;
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .academic-card h3 {
-            color: #1b5e20;
-            font-weight: 700;
-            margin: 10px 0 5px;
-        }
-
-        .academic-card .institution {
-            color: #2e7d32;
-            font-weight: 600;
-            margin: 5px 0;
-        }
-
-        .academic-card .duration {
-            color: #388e3c;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .achievement-list {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-
-        .achievement-list li {
-            color: #2e7d32;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-weight: 400;
-        }
-
-        .achievement-list li i {
-            color: #66bb6a;
-            width: 20px;
-            margin-top: 3px;
-            font-size: 1rem;
-        }
-
-        .achievement-list li strong {
-            color: #1b5e20;
-        }
-
-        .subjects-taken {
-            margin-top: 25px;
-            background: #f1f8e9;
-            padding: 15px;
-            border-radius: 16px;
-        }
-
-        .subjects-taken h4 {
-            color: #2e7d32;
-            margin: 0 0 12px 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
-        }
-
-        .subject-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .subject {
-            background: white;
-            color: #2e7d32;
-            padding: 6px 16px;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 6px rgba(76, 175, 80, 0.15);
-            border: 1px solid #c8e6c9;
-        }
-
-        .decoration-quote {
-            text-align: center;
-            margin-top: 40px;
-            color: #388e3c;
-            font-style: italic;
-            font-size: 1.2rem;
-            font-weight: 300;
-            padding: 0 20px;
-        }
-
-        .decoration-quote i {
-            color: #81c784;
-            margin: 0 8px;
-        }
-    </style>
 </head>
 
 <body>
+
     <header id="top">
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="academic.html">Personal Detail</a></li>
-                <li><a href="academic.html">Academic Journey</a></li>
-                <li><a href="projects.html">Previous Project</a></li>
-                <li><a href="certificates.html">Certificate</a></li>
-                <li><a href="resume.html">My Resume</a></li>
-            </ul>
-        </nav>
+        <div id="nav-placeholder"></div>
 
         <div class="hero">
             <div class="hero-content">
                 <h1>Hey, I'm<br>Ooi Xien Xien!</h1>
-                <p class="role-text" style="font-size: 1.5rem; font-weight: 600; color: var(--color-dark);">Software
-                    Engineer</p>
+                <p class="role-text">Software Engineer</p>
                 <p class="hero-desc">A self-motivated Software Engineer with an avid passion in all things code!</p>
 
                 <div class="contact-info">
@@ -250,17 +33,11 @@
                     <i class="fas fa-map-marker-alt"></i> Location: Johor, Malaysia
                 </div>
 
-                <div style="margin-top: 2rem;">
-                    <button class="btn">Contact Me <span>&#10148;</span></button>
-                </div>
+                <a href="tel:+60197560221" class="btn">
+                    Contact Me <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                </a>
 
-                <p id="datetime-display" style="margin-top: 1rem;"></p>
-
-                <div style="margin-top: 2rem; color: var(--color-dark); font-weight: 600;">
-                    <span
-                        style="border: 2px solid var(--color-dark); border-radius: 50%; padding: 0.2rem 0.6rem; margin-right: 0.5rem;">&#8595;</span>
-                    Scroll down
-                </div>
+                <p id="datetime-display"></p>
             </div>
 
             <div class="hero-image">
@@ -270,9 +47,8 @@
     </header>
 
     <main>
-        <section id="skills" class="container"
-            style="background: #f8f9fa; border-radius: 24px; padding: 3rem 2rem; margin-bottom: 2rem;">
-            <h2 style="text-align: center; margin-bottom: 1rem;">My Technical Skills</h2>
+        <section class="container section-card" style="background: #fafffc;">
+            <h2><i class="fas fa-code"></i> My Technical Skills <i class="fas fa-leaf"></i></h2>
             <div class="skills-grid">
                 <div class="skill-item">
                     <div class="circular-progress" style="--progress: 85%;">
@@ -314,7 +90,7 @@
                     <div class="circular-progress" style="--progress: 75%;">
                         <div class="progress-value">75%</div>
                     </div>
-                    <div class="skill-name">R programming</div>
+                    <div class="skill-name">R</div>
                 </div>
                 <div class="skill-item">
                     <div class="circular-progress" style="--progress: 70%;">
@@ -334,10 +110,22 @@
                     </div>
                     <div class="skill-name">MySQL</div>
                 </div>
+                <div class="skill-item">
+                    <div class="circular-progress" style="--progress: 90%;">
+                        <div class="progress-value">90%</div>
+                    </div>
+                    <div class="skill-name">HTML</div>
+                </div>
+                <div class="skill-item">
+                    <div class="circular-progress" style="--progress: 85%;">
+                        <div class="progress-value">85%</div>
+                    </div>
+                    <div class="skill-name">CSS</div>
+                </div>
             </div>
         </section>
 
-        <section class="academic-section container">
+        <section class="container" style="padding-top: 1rem;">
             <h2>
                 <i class="fas fa-graduation-cap"></i>
                 Academy
@@ -354,8 +142,8 @@
                     <ul class="achievement-list">
                         <li><i class="fas fa-star"></i> Current CGPA: <strong>3.82</strong></li>
                         <li><i class="fas fa-medal"></i> Dean's List (11/12/2024)</li>
-                        <li><i class="fas fa-users"></i> DSC Core Team Member (Multimedia Team)</li>
-                        <li><i class="fas fa-comments"></i> Media Team Member – Kelab Debat UTeM</li>
+                        <li><i class="fas fa-users"></i> DSC Core Team Member (Multimedia)</li>
+                        <li><i class="fas fa-comments"></i> Media Team – Kelab Debat UTeM</li>
                         <li><i class="fas fa-table-tennis"></i> Won <strong>1st Place</strong> – Sukan Pingpong Antara
                             Fakulti</li>
                     </ul>
@@ -364,7 +152,7 @@
                 <div class="academic-card">
                     <div class="card-header">
                         <i class="fas fa-school"></i>
-                        <h3>STPM (Pre-University Programme)</h3>
+                        <h3>STPM (Pre-University)</h3>
                         <p class="institution">SMK Taman Daya, Johor</p>
                         <p class="duration">2021 – 2023</p>
                     </div>
@@ -373,8 +161,7 @@
                         <li><i class="fas fa-user-tie"></i> Chairman of Kelab Rakan Muda</li>
                         <li><i class="fas fa-book"></i> Form 6 Librarian</li>
                         <li><i class="fas fa-cube"></i> 3rd Place – 3D Showcase Competition</li>
-                        <li><i class="fas fa-theater-masks"></i> 2nd Place – English Drama Pre-University Competition
-                        </li>
+                        <li><i class="fas fa-theater-masks"></i> 2nd Place – English Drama Pre-University</li>
                         <li><i class="fas fa-music"></i> 2nd Place – Singing Competition 2022/23</li>
                     </ul>
                     <div class="subjects-taken">
@@ -397,16 +184,12 @@
         </section>
     </main>
 
-    <footer style="text-align: center; padding: 2rem; margin-top: 2rem; border-top: 1px solid #eaeaea;">
-        <p>&copy; 2026 My Personal Portfolio. Built for Web Development Assignment.</p>
-        <div class="footer-links" style="margin-top: 1rem;">
-            <a href="https://github.com/" target="_blank" rel="noopener"
-                style="color: #2c3e50; font-weight: 600; text-decoration: none;">My GitHub</a> |
-            <a href="#top" style="color: #2c3e50; font-weight: 600; text-decoration: none;">Back to top ↑</a>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script src="components.js"></script>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
