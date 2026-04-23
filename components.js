@@ -1,8 +1,12 @@
 // components.js
 
-const headerHTML = `
-<nav id="shared-nav">
-    <ul class="nav-links">
+const navHTML = `
+<nav>
+    <button class="hamburger" id="hamburger-menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="personal_detail.html">Personal Detail</a></li>
         <li><a href="academic.html">Academic Journey</a></li>
@@ -17,7 +21,7 @@ const footerHTML = `
 <footer id="shared-footer">
     <p>&copy; 2026 OOI XIEN XIEN - Personal Portfolio.</p>
     <div class="footer-links">
-        <a href="https://github.com/" target="_blank" rel="noopener">My GitHub</a> |
+        <a href="https://github.com/IrynOoi" target="_blank" rel="noopener">My GitHub</a> |
         <a href="#top">Back to top ↑</a>
     </div>
 </footer>
@@ -29,7 +33,8 @@ function injectComponents() {
 
     // Inject the HTML into the placeholders
     if (navPlaceholder) {
-        navPlaceholder.innerHTML = headerHTML;
+        // FIXED: Changed headerHTML to navHTML
+        navPlaceholder.innerHTML = navHTML;
     }
     if (footerPlaceholder) {
         footerPlaceholder.innerHTML = footerHTML;
