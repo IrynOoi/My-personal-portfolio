@@ -57,7 +57,28 @@ function injectComponents() {
 
     if (navPlaceholder) {
         navPlaceholder.innerHTML = navHTML;
+
+        // ADDED THIS: Attach the mobile menu listener immediately after injecting the HTML
+        const hamburger = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+
+                // Toggle the FontAwesome icon (Bars <-> X)
+                const icon = hamburger.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
     }
+
     if (footerPlaceholder) {
         footerPlaceholder.innerHTML = footerHTML;
     }

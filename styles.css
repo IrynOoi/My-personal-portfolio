@@ -1569,49 +1569,75 @@ footer {
     nav {
         display: flex;
         flex-direction: row;
-        /* Keeps nav horizontal */
-        justify-content: flex-end;
-        /* Pushes hamburger to the right */
+        justify-content: space-between;
+        align-items: center;
         padding: 1rem 5%;
+        position: relative;
     }
 
     .hamburger {
         display: block;
-        /* Show hamburger on mobile */
+        margin-left: auto;
+        color: var(--color-light);
+        /* IMPORTANT: High z-index keeps the hamburger/X button visibly hovering ABOVE the sidebar */
+        z-index: 1001;
+        position: relative;
     }
 
     .nav-links {
-        position: absolute;
-        top: 100%;
-        /* Pushes the menu right below the dark green bar */
-        left: 0;
-        width: 100%;
+        /* 1. Change from absolute to fixed so it follows the screen */
+        position: fixed;
+        top: 0;
+        /* 2. Hide it completely off the right side of the screen */
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        /* Full screen height */
         background-color: var(--color-dark);
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
+        padding-top: 80px;
+        /* Pushes links down so they don't hide behind the X button */
         gap: 0;
-
-        /* This hides the menu by default with a smooth animation */
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
+        /* 3. Smooth sliding animation */
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         margin-top: 0;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.4);
+        /* Nice shadow on the left edge */
+        z-index: 1000;
+        /* Sits underneath the hamburger icon */
+
+        /* Remove old dropdown logic */
+        max-height: none;
+        overflow-y: auto;
     }
 
-    /* When the Javascript adds this class, the menu slides down */
+    /* When Javascript adds the 'active' class, this slides the menu onto the screen */
     .nav-links.active {
-        max-height: 500px;
+        right: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        /* Ensures the tap area spans the whole sidebar */
     }
 
     .nav-links a {
         display: block;
-        padding: 1.2rem 0;
+        padding: 1.5rem 0;
         width: 100%;
         text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 1.1rem;
+        /* Slightly larger text for easier finger tapping */
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none;
     }
 
     .nav-links a::after {
         display: none;
-        /* Removes the underline animation on mobile */
     }
 }

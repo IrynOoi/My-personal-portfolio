@@ -239,28 +239,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Hamburger Menu Toggle
-document.addEventListener("DOMContentLoaded", () => {
-    // We use setTimeout to ensure components.js has time to load the nav first
-    setTimeout(() => {
-        const hamburger = document.getElementById('hamburger-menu');
-        const navLinks = document.getElementById('nav-links');
 
-        if (hamburger && navLinks) {
-            hamburger.addEventListener('click', () => {
-                // Toggles the drop-down menu
-                navLinks.classList.toggle('active');
-
-                // Changes the icon from 3 lines (bars) to an X (times)
-                const icon = hamburger.querySelector('i');
-                if (navLinks.classList.contains('active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            });
-        }
-    }, 100); // 100ms delay
-});
