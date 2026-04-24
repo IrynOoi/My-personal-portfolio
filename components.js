@@ -18,11 +18,35 @@ const navHTML = `
 `;
 
 const footerHTML = `
-<footer id="shared-footer">
-    <p>&copy; 2026 OOI XIEN XIEN - Personal Portfolio.</p>
-    <div class="footer-links">
-        <a href="https://github.com/IrynOoi" target="_blank" rel="noopener">My GitHub</a> |
-        <a href="#top">Back to top ↑</a>
+<footer id="shared-footer" style="padding: 40px 20px 30px; text-align: center; background-color: var(--color-dark); color: #d1dfd2; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+    
+    <div style="text-align: center; margin-bottom: 10px;">
+        <img src="gallery/github_photo.jpg" alt="Click to enlarge" 
+             onclick="openFooterImage()"
+             style="width: 240px; height: auto; border-radius: 8px; border: 3px solid var(--color-light); box-shadow: 0 8px 20px rgba(0,0,0,0.3); cursor: pointer; transition: transform 0.3s ease;"
+             onmouseover="this.style.transform='scale(1.05)'" 
+             onmouseout="this.style.transform='scale(1)'"
+             title="Click to enlarge">
+        <p style="font-size: 0.85rem; margin-top: 12px; color: var(--color-light); font-weight: 500;">
+            <i class="fas fa-search-plus"></i> Click photo to enlarge
+        </p>
+    </div>
+
+    <a href="https://github.com/IrynOoi" target="_blank" rel="noopener" 
+       style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 28px; background-color: var(--color-bg); color: var(--color-dark); font-weight: 700; text-decoration: none; border-radius: 50px; font-size: 1.05rem; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"
+       onmouseover="this.style.backgroundColor='var(--color-medium)'; this.style.color='#fff'; this.style.transform='translateY(-3px)';" 
+       onmouseout="this.style.backgroundColor='var(--color-bg)'; this.style.color='var(--color-dark)'; this.style.transform='translateY(0)';">
+        <i class="fab fa-github" style="font-size: 1.3rem;"></i> Visit My GitHub Profile
+    </a>
+
+    <div style="margin-top: 20px; width: 100%; max-width: 600px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 15px;">
+        <span style="font-weight: 500;">&copy; 2026 OOI XIEN XIEN - Personal Portfolio</span>
+        <a href="#top" style="color: #fff; text-decoration: none; font-weight: 600; transition: color 0.3s;" onmouseover="this.style.color='var(--color-light)'" onmouseout="this.style.color='#fff'">Back to top ↑</a>
+    </div>
+
+    <div id="footer-lightbox" class="modal" onclick="closeFooterImage(event)" style="z-index: 9999;">
+        <span class="close-modal" onclick="closeFooterImage(event)">&times;</span>
+        <img class="modal-content" src="gallery/github_photo.jpg" alt="Enlarged GitHub Photo" style="border: 4px solid var(--color-light); border-radius: 12px; max-height: 80vh; width: auto;">
     </div>
 </footer>
 `;
@@ -31,20 +55,31 @@ function injectComponents() {
     const navPlaceholder = document.getElementById('nav-placeholder');
     const footerPlaceholder = document.getElementById('footer-placeholder');
 
-    // Inject the HTML into the placeholders
     if (navPlaceholder) {
-        // FIXED: Changed headerHTML to navHTML
         navPlaceholder.innerHTML = navHTML;
     }
     if (footerPlaceholder) {
         footerPlaceholder.innerHTML = footerHTML;
     }
 
-    // Run the active link highlighter from your script.js
     if (typeof highlightActiveLink === 'function') {
         highlightActiveLink();
     }
 }
 
-// Run this when the page loads
+// Global functions to handle the footer image click
+window.openFooterImage = function () {
+    const modal = document.getElementById('footer-lightbox');
+    if (modal) {
+        modal.style.display = 'block';
+    }
+};
+
+window.closeFooterImage = function (event) {
+    // Only close if clicking the dark background or the X button
+    if (event.target.id === 'footer-lightbox' || event.target.className === 'close-modal') {
+        document.getElementById('footer-lightbox').style.display = 'none';
+    }
+};
+
 document.addEventListener("DOMContentLoaded", injectComponents);
