@@ -770,8 +770,47 @@ footer {
         flex-direction: column;
     }
 
+    .hero {
+        flex-direction: column;
+        /* Stacks text on top of the image */
+        padding: 3rem 5% 4rem;
+        /* Reduces the huge top spacing on mobile */
+        text-align: center;
+        /* Centers the text */
+        gap: 2.5rem;
+        /* Adds space between the text and the photo */
+    }
+
+    .hero-content {
+        max-width: 100%;
+        /* Overrides the 50% restriction from desktop */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centers the button and contact info */
+    }
+
+    .hero-image {
+        justify-content: center;
+        /* Centers the image */
+        width: 100%;
+    }
+
+    .blob-img {
+        width: 280px;
+        /* Shrinks the image to fit mobile screens safely */
+        height: 280px;
+    }
+
     .hero h1 {
         font-size: 3rem;
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: left;
+        /* Keeps the icons and text aligned neatly */
+        display: inline-block;
     }
 
     .about-content {
@@ -780,6 +819,50 @@ footer {
         gap: 3rem;
         padding: 2rem;
     }
+
+    /* --> ADD THESE NEW RULES FOR THE PERSONAL DETAIL PAGE <-- */
+    .about-section {
+        flex-direction: column;
+        /* Stacks the photo on top of the text card */
+        text-align: center;
+        /* Centers the text */
+        gap: 2rem;
+        /* Adds breathing room between photo and card */
+        padding: 1rem;
+        /* Prevents it from touching the screen edges */
+    }
+
+    .profile-pic {
+        width: 240px;
+        /* Shrinks the photo so it fits perfectly on phones */
+        height: 240px;
+    }
+
+    .about-card {
+        padding: 2rem 1.5rem;
+        /* Slightly smaller padding for mobile screens */
+        width: 100%;
+        /* Ensures the green box doesn't overflow */
+    }
+
+    .about-card h2 {
+        text-align: center;
+        /* Centers your name on mobile */
+    }
+
+    .social-icons {
+        justify-content: center;
+        /* Centers your social media buttons */
+        flex-wrap: wrap;
+        /* Allows icons to wrap to a new line if needed */
+    }
+
+    .gallery-title {
+        text-align: center;
+        /* Centers the "My Gallery" text */
+    }
+
+    /* --> END OF PERSONAL DETAIL RULES <-- */
 
     .bg-light,
     .contact-form,
